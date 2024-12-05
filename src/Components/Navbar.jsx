@@ -12,7 +12,7 @@ function Navbar({setcategory}) {
     </button>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
-        <div className="nav-link" style={{cursor:"pointer"}} onClick={()=>{setcategory("general")}} aria-current="page" href="#">General</div>
+        <div className="nav-link" style={{cursor:"pointer"}} onClick={()=>{setcategory("general")}} >General</div>
         <div className="nav-link" style={{cursor:"pointer"}} onClick={()=>{setcategory("technology")}}>Technology</div>
         <div className="nav-link" style={{cursor:"pointer"}}  onClick={()=>{setcategory("health")}} >Health</div>
         <div className="nav-link" style={{cursor:"pointer"}}  onClick={()=>{setcategory("sports")}}>Sports</div>
