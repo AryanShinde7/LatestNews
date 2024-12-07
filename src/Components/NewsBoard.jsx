@@ -24,3 +24,54 @@ function NewsBoard({category}) {
 }
 
 export default NewsBoard;
+
+// import React, { useState, useEffect } from "react";
+// import NewsItems from "./NewsItems";
+
+// function NewsBoard({ category }) {
+//   const [articles, setArticles] = useState([]);
+//   const [loading, setLoading] = useState(true);
+
+//   useEffect(() => {
+//     const fetchNews = async () => {
+//       setLoading(true);
+//       try {
+//         let apiKey = process.env.REACT_APP_NEWS_API_KEY;
+//         let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`;
+//         let response = await fetch(url);
+//         let data = await response.json();
+//         setArticles(data.articles || []);
+//       } catch (error) {
+//         console.error("Failed to fetch news:", error);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+//     fetchNews();
+//   }, [category]);
+
+//   return (
+//     <div>
+//       <br />
+//       <h2 className="text-center">
+//         LATEST <span className="badge bg-danger">NEWS</span>
+//       </h2>
+//       {loading ? (
+//         <p>LOADING .....</p>
+//       ) : (
+//         articles.map((news, index) => (
+//           <NewsItems
+//             key={index}
+//             title={news.title}
+//             description={news.description}
+//             src={news.urlToImage}
+//             url={news.url}
+//           />
+//         ))
+//       )}
+//     </div>
+//   );
+// }
+
+// export default NewsBoard;
+
