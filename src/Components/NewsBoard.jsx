@@ -18,7 +18,7 @@ function NewsBoard({category}) {
       </h2>
      {articles?(articles.map((news , index) =>{
         return <NewsItems key={index} title={news.title} description={news.description} src={news.urlToImage} url={news.url}/>
-    })):<p>LOADING .....</p>}
+    })):<p>Load</p>}
     </div>
   );
 }
